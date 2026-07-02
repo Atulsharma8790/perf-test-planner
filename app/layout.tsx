@@ -19,7 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body suppressHydrationWarning style={{ background: 'var(--bg-base)', color: 'var(--text-primary)', minHeight: '100vh' }}>
         <Suspense fallback={null}><PortfolioBar /></Suspense>
         <ThemeProvider><AuthProvider><DisclaimerBanner />{children}</AuthProvider></ThemeProvider>
-      </body>
+      <Suspense fallback={null}><PortfolioBar /></Suspense></body>
     </html>
   )
 }
